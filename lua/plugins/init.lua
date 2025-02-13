@@ -265,6 +265,17 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+  {
+   'akinsho/toggleterm.nvim', version = "*", config = true  
+  },
+  {
+    "github/copilot.vim",
+    lazy = false,
+    config = function() 
+      vim.g.copilot_no_tab_map = true; 
+      vim.g.copilot_assume_mapped = true; 
+    end
+  }
 }
 
 local config = require("core.utils").load_config()
